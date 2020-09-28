@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class ListaEspecies extends StatelessWidget {
   final List<Especie> especies;
+  
   ListaEspecies({@required this.especies});
 
   @override
@@ -21,25 +22,18 @@ class ListaEspecies extends StatelessWidget {
               fadeInDuration: Duration(milliseconds: 200),
               fit: BoxFit.cover,
             ),
-  
-            
-                Positioned.fill(
-                  //bottom: _screenSize.height* 0.01,
-                  child:Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
+            Positioned.fill(
+              //bottom: _screenSize.height* 0.01,
+              child:Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
                     especies[index].especie ,
                     style: TextStyle(fontSize: 50.0),
                   ),
-                    ],
-                    
-                   
-                  )
-                 
-                ),
-              
-          
+                ],   
+              )      
+            ),
           ],
         );
       },

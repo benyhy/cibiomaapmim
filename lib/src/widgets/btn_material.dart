@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:apmim/src/widgets/responsive.dart';
 
 class BtnMaterial extends StatelessWidget {
   final String text;
@@ -14,14 +15,16 @@ class BtnMaterial extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _screenSize = MediaQuery.of(context).size;
+    //final _screenSize = MediaQuery.of(context).size;
+    final Responsive responsive = Responsive.of(context);
     return Container(
-      child: MaterialButton( 
-        height: _screenSize.height *0.06,
-        minWidth: _screenSize.width * 0.65,
+      child: MaterialButton(
+        height: responsive.hp(6),
+        minWidth: responsive.wp(70),
         child: Text(
           text,
-          style: TextStyle(color: textColor, fontSize: 20.0),
+          style: TextStyle(color: textColor, 
+          fontSize: responsive.ip(2.3)),
         ),
         onPressed: press,
         color: color,

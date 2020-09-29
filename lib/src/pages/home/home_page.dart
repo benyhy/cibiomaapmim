@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:apmim/src/pages/home/home_portrait.dart';
 
-class Homepage extends StatelessWidget {
+class HomePage extends StatelessWidget {
  
   @override
   Widget build(BuildContext context) {

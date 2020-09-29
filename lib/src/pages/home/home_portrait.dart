@@ -1,3 +1,4 @@
+import 'package:apmim/src/widgets/responsive.dart';
 import 'package:flutter/material.dart';
 
 import 'package:apmim/src/widgets/btns_home.dart';
@@ -8,13 +9,13 @@ class HomePortraitPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _screenSize = MediaQuery.of(context).size;
+    final Responsive responsive = Responsive.of(context);
     return Center(
       child: Column(
         children: [
           Container(
-            width: _screenSize.width ,
-            height: _screenSize.height * 0.5,
+            width: responsive.width ,
+            height: responsive.hp(50),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -23,8 +24,8 @@ class HomePortraitPage extends StatelessWidget {
             ),
           ),
           Container(
-            width: _screenSize.width,
-            height: _screenSize.height * 0.5,
+            width: responsive.width ,
+            height: responsive.hp(50),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[

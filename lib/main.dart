@@ -1,7 +1,11 @@
+
 import 'package:flutter/material.dart';
 
 import 'package:apmim/src/pages/home/home_page.dart';
 import 'package:apmim/src/pages/cibioma/cibioma_page.dart';
+import 'package:apmim/src/pages/cibioma/animales_page.dart';
+
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -12,8 +16,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
-        '/': (BuildContext context) => Homepage(),
+        '/': (BuildContext context) => HomePage(),
         'cibioma': (BuildContext context) => CibiomaPage(),
+        'animales': (BuildContext context) => AnimalesPage(),
       },
     );
   }

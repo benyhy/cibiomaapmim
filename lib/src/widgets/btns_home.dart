@@ -1,3 +1,4 @@
+import 'package:apmim/src/widgets/responsive.dart';
 import 'package:flutter/material.dart';
 
 import 'package:apmim/src/widgets/btn_material.dart';
@@ -5,7 +6,8 @@ import 'package:apmim/src/widgets/btn_material.dart';
 class BtnsHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final _screensize = MediaQuery.of(context).size;
+    final Responsive responsive = Responsive.of(context);
+  
     return Column(
       children: <Widget>[
         BtnMaterial(
@@ -15,13 +17,13 @@ class BtnsHome extends StatelessWidget {
           },
           color: Color(0xff005292),
         ),
-        SizedBox(height: _screensize.height * 0.02),
+        SizedBox(height: responsive.hp(2)),
         BtnMaterial(
           text: "Rutas",
           press: () {},
           color: Color(0xff008f00),
         ),
-        SizedBox(height: _screensize.height * 0.02),
+        SizedBox(height: responsive.hp(2)),
         BtnMaterial(
           text: "Comparte tu Experiencia",
           press: () {},

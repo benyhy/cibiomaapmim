@@ -9,6 +9,7 @@ class CibiomaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     especiesProvider.getEspecies();
+    
     return Scaffold(
       appBar: AppBar(
         title: Text('Cibioma'),

@@ -13,9 +13,7 @@ class Especies{
       final especie = new Especie.fromJsonMap(item);
       items.add( especie);
     }
-
   }
-
 }
 
 
@@ -23,15 +21,13 @@ class Especie {
   int id;
   String especie;
   String urlimagen;
-  String createdAt;
-  String updatedAt;
+  
 
   Especie({
     this.id,
     this.especie,
     this.urlimagen,
-    this.createdAt,
-    this.updatedAt,
+    
   });
 
   Especie.fromJsonMap( Map<String, dynamic> json ) {

@@ -30,7 +30,7 @@ class ListaEspecies extends StatelessWidget {
 
   Widget _especieslista(BuildContext context, Especie especie) {
     final _screenSize = MediaQuery.of(context).size;
-    return Stack(
+    final lista = Stack(
       children: <Widget>[
         FadeInImage(
           height: _screenSize.height * 0.4,
@@ -53,5 +53,14 @@ class ListaEspecies extends StatelessWidget {
         )),
       ],
     );
+     return GestureDetector(
+      child: lista,
+      onTap: (){
+
+        Navigator.pushNamed(context, 'animales', arguments: especie );
+
+      },
+    );
+
   }
 }
